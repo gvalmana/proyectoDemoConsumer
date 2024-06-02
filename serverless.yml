@@ -1,0 +1,13 @@
+service: ledgerDemoConsumer
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  stage: dev
+  lambdaHashingVersion: 20201221
+    
+functions:
+  ledgerDemoConsumer:
+    handler: src/handlers/ledgerDemoConsumer.handler
